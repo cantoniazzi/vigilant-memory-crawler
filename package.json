@@ -1,0 +1,22 @@
+{
+  "name": "vigilant-memory-crawler",
+  "version": "1.0.0",
+  "description": "Crawler engine of the vigilant API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cantoniazzi/vigilant-memory-crawler.git"
+  },
+  "author": "Cássio Antoniazzi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cantoniazzi/vigilant-memory-crawler/issues"
+  },
+  "homepage": "https://github.com/cantoniazzi/vigilant-memory-crawler#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
