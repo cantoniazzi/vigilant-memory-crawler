@@ -23,6 +23,8 @@ const crawlerService = (function() {
             
                     let title = $('meta[property="og:title"]').attr('content') || $("title").text();
                     let description = $('meta[property="og:description"]').attr('content') || $('meta[name="description"]').attr('content');
+                    
+                    let image = $('meta[property="og:image"]').attr('content')
                     let iconUrl = $('link[rel=icon]').attr('href') || $('img').first().attr('src');
                     let icon = '';
 
@@ -32,7 +34,7 @@ const crawlerService = (function() {
                         icon = 'http://via.placeholder.com/350x150?text=sem-imagem';
                     }
 
-                    resolve({ title: title, description: description, icon: icon});
+                    resolve({title: title, description: description, image: image, icon: icon});
                 });
             }
         );
