@@ -1,11 +1,17 @@
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const router = express.Router();
+const bodyParser = require("body-parser");
 
+const indexRoute = require('./routes/index.js');
+const crawlerRoute = require('./routes/crawlerRoute.js');
 
-app.get('/', function(req, res) {
-    res.send('Hello World!');
+var port = process.env.PORT || 8080;
+
+// routes
+app.use('/', indexRoute);
+app.use('/get-page-info', crawlerRoute);
+
+app.listen(port, function() {
+    console.log('Listening on port 8080!');
 });
-
-app.listen(3000, function() {
-    console.log('Listening on port 3000!');
-})
