@@ -10,7 +10,7 @@ var port = process.env.PORT || 8080;
 
 // routes
 app.use('/', indexRoute);
-app.use('/get-page-info', crawlerRoute);
+app.use('/page-info', crawlerRoute);
 
 app.listen(port, function() {
     console.log('Listening on port 8080!');
